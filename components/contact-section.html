@@ -1,0 +1,72 @@
+<!-- Contact Section Component -->
+<section id="contacto" class="contact-section" aria-label="Formulario de contacto">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Contáctanos</h2>
+      <p class="section-subtitle">Reserva tu servicio o solicita información</p>
+    </div>
+    <div class="contact-content">
+      <div class="contact-form-container">
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Nombre completo *</label>
+            <input type="text" id="name" name="name" required>
+            <span class="error-message"></span>
+          </div>
+          <div class="form-group">
+            <label for="phone">Teléfono *</label>
+            <input type="tel" id="phone" name="phone" required>
+            <span class="error-message"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email">
+            <span class="error-message"></span>
+          </div>
+          <div class="form-group">
+            <label for="service">Servicio de interés</label>
+            <select id="service" name="service">
+              <option value="">Selecciona un servicio</option>
+              <option value="lavado-basico">Lavado Básico</option>
+              <option value="lavado-premium">Lavado Premium</option>
+              <option value="detailing">Detailing Completo</option>
+              <option value="encerado">Encerado</option>
+              <option value="pulido">Pulido</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fas fa-paper-plane"></i>
+            Enviar Mensaje
+          </button>
+        </form>
+      </div>
+      <div class="contact-info">
+        <a href="tel:3213284627" class="contact-card contact-link">
+          <i class="fas fa-phone"></i>
+          <h3>Llámanos</h3>
+          <p>321 3284627</p>
+        </a>
+        <a href="https://wa.me/573213284627?text=Hola,%20me%20interesa%20un%20servicio%20de%20lavado%20de%20auto" 
+           target="_blank" 
+           class="contact-card contact-link"
+           rel="noopener noreferrer">
+          <i class="fab fa-whatsapp"></i>
+          <h3>WhatsApp</h3>
+          <p>Reserva rápida</p>
+        </a>
+        <a href="https://maps.google.com?q=Cra.+5%2C+Sutatausa%2C+Cundinamarca" 
+           target="_blank" 
+           class="contact-card contact-link"
+           rel="noopener noreferrer">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Visítanos</h3>
+          <p>Cra. 5, Sutatausa</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

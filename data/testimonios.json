@@ -1,0 +1,22 @@
+[
+  {
+    "nombre": "Juan Ramírez",
+    "comentario": "Excelente servicio, mi carro quedó impecable. ¡Recomendado!",
+    "rating": 5
+  },
+  {
+    "nombre": "María Torres",
+    "comentario": "El mejor lavadero de la región. La atención fue rápida y muy profesional.",
+    "rating": 5
+  },
+  {
+    "nombre": "Carlos Gómez",
+    "comentario": "Me sorprendió la calidad del encerado. Volveré pronto.",
+    "rating": 5
+  },
+  {
+    "nombre": "Ana Beltrán",
+    "comentario": "Muy cumplidos y precios justos. ¡Volveré sin duda!",
+    "rating": 5
+  }
+]

@@ -1,0 +1,159 @@
+# Dependencias
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de configuración local
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Archivos de sistema
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Archivos de IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos de log
+*.log
+logs/
+
+# Archivos temporales
+*.tmp
+*.temp
+.cache/
+
+# Archivos de build
+dist/
+build/
+out/
+
+# Archivos de backup
+*.bak
+*.backup
+*.old
+
+# Archivos de configuración específicos del proyecto
+# Descomenta si necesitas ignorar configuraciones locales
+# data/config.local.json
+
+# Archivos de EmailJS (si se generan automáticamente)
+# .emailjs/
+
+# Archivos de Google Analytics (si se usan)
+# google-analytics.js
+
+# Archivos de SEO (si se generan automáticamente)
+# sitemap.xml
+# robots.txt
+
+# Archivos de compresión
+*.zip
+*.tar.gz
+*.rar
+
+# Archivos de documentación temporal
+*.md~
+*.txt~
+
+# Archivos de prueba
+test/
+tests/
+__tests__/
+*.test.js
+*.spec.js
+
+# Archivos de coverage
+coverage/
+.nyc_output/
+
+# Archivos de linting
+.eslintcache
+.stylelintcache
+
+# Archivos de TypeScript (si se migra en el futuro)
+*.tsbuildinfo
+
+# Archivos de Sass/SCSS (si se migra en el futuro)
+*.sass
+*.scss
+
+# Archivos de Less (si se migra en el futuro)
+*.less
+
+# Archivos de PostCSS (si se migra en el futuro)
+.postcssrc.js
+postcss.config.js
+
+# Archivos de Webpack (si se migra en el futuro)
+webpack.config.js
+webpack.mix.js
+
+# Archivos de Babel (si se migra en el futuro)
+.babelrc
+babel.config.js
+
+# Archivos de ESLint (si se migra en el futuro)
+.eslintrc.js
+.eslintrc.json
+
+# Archivos de Prettier (si se migra en el futuro)
+.prettierrc
+.prettierrc.js
+
+# Archivos de EditorConfig (si se migra en el futuro)
+.editorconfig
+
+# Archivos de Git hooks
+.git/hooks/
+
+# Archivos de configuración de servidor
+.htaccess
+nginx.conf
+apache.conf
+
+# Archivos de certificados SSL
+*.pem
+*.key
+*.crt
+*.csr
+
+# Archivos de base de datos (si se agrega en el futuro)
+*.db
+*.sqlite
+*.sqlite3
+
+# Archivos de caché del navegador
+.cache/
+.browser-cache/
+
+# Archivos de optimización de imágenes
+optimized-images/
+compressed-images/
+
+# Archivos de backup de configuración
+config.backup.json
+config.old.json
+
+# Archivos de desarrollo local
+local-config.json
+dev-config.json
+
+# Archivos de staging
+staging-config.json
+
+# Archivos de producción
+prod-config.json 

@@ -1,0 +1,22 @@
+[
+  {
+    "nombre": "Lavado Básico",
+    "descripcion": "Aspirado interior, limpieza exterior y secado manual.",
+    "precio": "$18.000"
+  },
+  {
+    "nombre": "Lavado Premium",
+    "descripcion": "Incluye lavado básico + limpieza profunda de tapetes, paneles y tablero.",
+    "precio": "$28.000"
+  },
+  {
+    "nombre": "Encerado Profesional",
+    "descripcion": "Protección de pintura, brillo y acabado suave.",
+    "precio": "$45.000"
+  },
+  {
+    "nombre": "Limpieza de Motor",
+    "descripcion": "Desengrasado, detallado seguro y protección de componentes.",
+    "precio": "$32.000"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "nombre": "AUTO SPA PRO",
+  "direccion": "Cra. 5, Sutatausa, Cundinamarca",
+  "telefono": "321 3284627",
+  "whatsapp": "573213284627",
+  "email": "contacto@autospapro.com",
+  "horarios": "Lunes a Viernes 8am–5pm, Sábado 7am–5pm, Domingo 7am–12m",
+  "promocion": "Descuento del 10% en tu primera visita. ¡Reserva por WhatsApp!",
+  "metodos_pago": "Efectivo, Nequi, Bancolombia",
+  "google_reviews": "https://g.co/kgs/auto_spa_pro_google"
+}
+
+    "templateId": "template_contact_form",
+    "userId": "your_user_id"
+  }
+}
