@@ -1,3 +1,5 @@
+import { ErrorHandlerUtils } from './error-handler.js';
+
 export async function renderHero() {
   const hero = document.querySelector('.hero-section');
   if (!hero) return;
@@ -20,10 +22,12 @@ export async function renderHero() {
 
 // Función de inicialización para el sistema modular
 export function initHero() {
-  console.log('Inicializando hero section...');
-  
-  // Configurar funcionalidades del hero
-  setupHeroFeatures();
+  try {
+    // Configurar funcionalidades del hero
+    setupHeroFeatures();
+  } catch (error) {
+    ErrorHandlerUtils.system('Error al inicializar hero section', error);
+  }
 }
 
 // Configurar funcionalidades del hero
@@ -80,7 +84,7 @@ function setupHeroButtons() {
     
     // Click tracking
     button.addEventListener('click', () => {
-      console.log('Hero button clicked:', button.textContent.trim());
+      // Aquí se puede agregar analytics o tracking
     });
   });
 }

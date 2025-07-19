@@ -1,33 +1,54 @@
-// import servicios from '../data/servicios.json' assert { type: 'json' };
-// import config from '../data/config.json' assert { type: 'json' };
+import { ErrorHandlerUtils } from './error-handler.js';
 
 export async function renderServicios() {
-  const container = document.getElementById('services-container'); // ✅ Usar el ID correcto
+  const container = document.getElementById('services-container');
+  
   if (!container) {
-    console.log('Contenedor de servicios no encontrado');
+    ErrorHandlerUtils.system('Contenedor de servicios no encontrado');
     return;
   }
   
   try {
-    console.log('Cargando servicios...');
-    const [servRes, confRes] = await Promise.all([
-      fetch('data/servicios.json'),
-      fetch('data/config.json')
-    ]);
+    const servRes = await fetch('data/servicios.json');
+    const confRes = await fetch('data/config.json');
     
     if (!servRes.ok || !confRes.ok) {
-      throw new Error('Error al cargar datos');
+      throw new Error(`Error al cargar datos: servicios=${servRes.status}, config=${confRes.status}`);
     }
     
     const servicios = await servRes.json();
     const config = await confRes.json();
 
+    // Función para obtener el icono según el tipo de servicio
+    const getServiceIcon = (nombre) => {
+      const nombreLower = nombre.toLowerCase();
+      
+      if (nombreLower.includes('moto')) {
+        return 'fas fa-motorcycle';
+      } else if (nombreLower.includes('carro')) {
+        return 'fas fa-car';
+      } else if (nombreLower.includes('general')) {
+        return 'fas fa-spray-can'; // Icono de spray para lavado general
+      } else if (nombreLower.includes('volquetas')) {
+        return 'fas fa-truck';
+      } else if (nombreLower.includes('doble troque')) {
+        return 'fas fa-truck-moving';
+      } else if (nombreLower.includes('busetas') || nombreLower.includes('buses')) {
+        return 'fas fa-bus';
+      } else if (nombreLower.includes('mulas') || nombreLower.includes('tractocamiones')) {
+        return 'fas fa-truck-pickup';
+      } else {
+        return 'fas fa-car-wash'; // Icono por defecto
+      }
+    };
+
     let html = '';
-    servicios.forEach(servicio => {
+    servicios.forEach((servicio, index) => {
+      const iconClass = getServiceIcon(servicio.nombre);
       html += `
         <div class="service-card">
           <div class="service-icon">
-            <i class="fas fa-car-wash"></i>
+            <i class="${iconClass}"></i>
           </div>
           <h3 class="service-title">${servicio.nombre || 'Servicio'}</h3>
           <p class="service-description">${servicio.descripcion || 'Descripción del servicio'}</p>
@@ -37,10 +58,9 @@ export async function renderServicios() {
     });
     
     container.innerHTML = html;
-    console.log('Servicios renderizados correctamente');
     
   } catch (error) {
-    console.error('Error cargando servicios:', error);
+    ErrorHandlerUtils.system('Error al cargar servicios', error);
     if (container) {
       container.innerHTML = `
         <div style="text-align: center; padding: 2rem; color: var(--text-secondary);">
@@ -54,34 +74,35 @@ export async function renderServicios() {
 
 // Función de inicialización para el sistema modular
 export async function initServices() {
-  console.log('Inicializando servicios...');
-  
-  // Esperar a que el componente esté cargado
-  let attempts = 0;
-  const maxAttempts = 10;
-  
-  while (attempts < maxAttempts) {
-    const container = document.getElementById('services-container');
-    if (container) {
-      console.log('Contenedor de servicios encontrado, renderizando...');
-      break;
+  try {
+    // Esperar a que el componente esté cargado
+    let attempts = 0;
+    const maxAttempts = 20;
+    
+    while (attempts < maxAttempts) {
+      const container = document.getElementById('services-container');
+      
+      if (container) {
+        break;
+      }
+      
+      await new Promise(resolve => setTimeout(resolve, 300));
+      attempts++;
     }
     
-    console.log(`Intento ${attempts + 1}: Esperando a que el componente de servicios se cargue...`);
-    await new Promise(resolve => setTimeout(resolve, 500));
-    attempts++;
+    if (attempts >= maxAttempts) {
+      ErrorHandlerUtils.system('No se pudo encontrar el contenedor de servicios después de varios intentos');
+      return;
+    }
+    
+    // Renderizar servicios
+    await renderServicios();
+    
+    // Configurar interacciones de las tarjetas de servicio
+    setupServiceCards();
+  } catch (error) {
+    ErrorHandlerUtils.system('Error al inicializar servicios', error);
   }
-  
-  if (attempts >= maxAttempts) {
-    console.error('No se pudo encontrar el contenedor de servicios después de varios intentos');
-    return;
-  }
-  
-  // Renderizar servicios
-  await renderServicios();
-  
-  // Configurar interacciones de las tarjetas de servicio
-  setupServiceCards();
 }
 
 // Configurar interacciones de las tarjetas de servicio

@@ -13,6 +13,7 @@ import { initLocation } from './ubicacion.js';
 import { initHero } from './hero.js';
 import { initCarAnimation } from './car-animation.js';
 import { initUtils } from './utils.js';
+import { ErrorHandlerUtils } from './error-handler.js';
 
 class AutoSpaApp {
   constructor() {
@@ -25,8 +26,6 @@ class AutoSpaApp {
    */
   async init() {
     try {
-      console.log('🚗 Iniciando AUTO SPA PRO...');
-      
       // Ocultar pantalla de carga
       this.hideLoadingScreen();
       
@@ -40,10 +39,9 @@ class AutoSpaApp {
       this.setupGlobalEvents();
       
       this.isInitialized = true;
-      console.log('✅ AUTO SPA PRO inicializado correctamente');
       
     } catch (error) {
-      console.error('❌ Error inicializando la aplicación:', error);
+      ErrorHandlerUtils.critical('Error al inicializar la aplicación', error);
     }
   }
 

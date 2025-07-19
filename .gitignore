@@ -4,70 +4,49 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Archivos de configuración local
+# Archivos de entorno
 .env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
-# Archivos de sistema
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
+# Archivos de build
+dist/
+build/
+out/
 
-# Archivos de IDE/Editor
+# Archivos de IDE
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
-# Archivos de log
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
 *.log
-logs/
 
 # Archivos temporales
 *.tmp
 *.temp
-.cache/
 
-# Archivos de build
-dist/
-build/
-out/
+# Archivos de caché
+.cache/
+.parcel-cache/
+
+# Archivos de configuración local
+config.local.json
+servicios.local.json
+testimonios.local.json
 
 # Archivos de backup
 *.bak
 *.backup
-*.old
-
-# Archivos de configuración específicos del proyecto
-# Descomenta si necesitas ignorar configuraciones locales
-# data/config.local.json
-
-# Archivos de EmailJS (si se generan automáticamente)
-# .emailjs/
-
-# Archivos de Google Analytics (si se usan)
-# google-analytics.js
-
-# Archivos de SEO (si se generan automáticamente)
-# sitemap.xml
-# robots.txt
-
-# Archivos de compresión
-*.zip
-*.tar.gz
-*.rar
-
-# Archivos de documentación temporal
-*.md~
-*.txt~
 
 # Archivos de prueba
 test/
@@ -76,84 +55,1089 @@ __tests__/
 *.test.js
 *.spec.js
 
-# Archivos de coverage
+# Archivos de documentación generados
+docs/
+
+# Archivos de análisis
 coverage/
 .nyc_output/
 
-# Archivos de linting
-.eslintcache
-.stylelintcache
-
-# Archivos de TypeScript (si se migra en el futuro)
-*.tsbuildinfo
-
-# Archivos de Sass/SCSS (si se migra en el futuro)
-*.sass
-*.scss
-
-# Archivos de Less (si se migra en el futuro)
-*.less
-
-# Archivos de PostCSS (si se migra en el futuro)
-.postcssrc.js
-postcss.config.js
-
-# Archivos de Webpack (si se migra en el futuro)
-webpack.config.js
-webpack.mix.js
-
-# Archivos de Babel (si se migra en el futuro)
-.babelrc
-babel.config.js
-
-# Archivos de ESLint (si se migra en el futuro)
-.eslintrc.js
-.eslintrc.json
-
-# Archivos de Prettier (si se migra en el futuro)
-.prettierrc
-.prettierrc.js
-
-# Archivos de EditorConfig (si se migra en el futuro)
-.editorconfig
-
-# Archivos de Git hooks
-.git/hooks/
-
-# Archivos de configuración de servidor
-.htaccess
-nginx.conf
-apache.conf
-
-# Archivos de certificados SSL
+# Archivos de seguridad
 *.pem
 *.key
 *.crt
-*.csr
 
-# Archivos de base de datos (si se agrega en el futuro)
+# Archivos de base de datos
 *.db
 *.sqlite
 *.sqlite3
 
-# Archivos de caché del navegador
-.cache/
-.browser-cache/
+# Archivos de compresión
+*.zip
+*.tar.gz
+*.rar
 
-# Archivos de optimización de imágenes
-optimized-images/
-compressed-images/
+# Archivos de imagen grandes
+*.psd
+*.ai
+*.sketch
 
-# Archivos de backup de configuración
-config.backup.json
-config.old.json
+# Archivos de video grandes
+*.mov
+*.avi
+*.mpg
+*.mpeg
 
-# Archivos de desarrollo local
-local-config.json
-dev-config.json
+# Archivos de audio
+*.mp3
+*.wav
+*.ogg
 
-# Archivos de staging
-staging-config.json
+# Archivos de fuente
+*.ttf
+*.otf
+*.woff
+*.woff2
 
-# Archivos de producción
-prod-config.json 
+# Archivos de configuración de servidor
+.htaccess
+web.config
+
+# Archivos de monitoreo
+*.pid
+*.seed
+*.pid.lock
+
+# Archivos de npm
+.npm
+.eslintcache
+
+# Archivos de yarn
+.yarn-integrity
+
+# Archivos de bower
+bower_components/
+
+# Archivos de jspm
+jspm_packages/
+
+# Archivos de typings
+typings/
+
+# Archivos de next.js
+.next/
+
+# Archivos de nuxt.js
+.nuxt/
+
+# Archivos de vuepress
+.vuepress/dist/
+
+# Archivos de serverless
+.serverless/
+
+# Archivos de fusebox
+.fusebox/
+
+# Archivos de dynamodb
+.dynamodb/
+
+# Archivos de tern
+.tern-port
+
+# Archivos de parcel
+.parcel-cache/
+
+# Archivos de rollup
+.rollup.cache/
+
+# Archivos de webpack
+.webpack/
+
+# Archivos de gulp
+.gulp/
+
+# Archivos de grunt
+.grunt/
+
+# Archivos de broccoli
+.broccoli/
+
+# Archivos de ember
+.tmp/
+dist/
+
+# Archivos de angular
+.angular/
+
+# Archivos de react
+build/
+
+# Archivos de vue
+dist/
+
+# Archivos de svelte
+.svelte-kit/
+
+# Archivos de solid
+dist/
+
+# Archivos de preact
+dist/
+
+# Archivos de inferno
+dist/
+
+# Archivos de hyperapp
+dist/
+
+# Archivos de mithril
+dist/
+
+# Archivos de lit
+dist/
+
+# Archivos de stencil
+dist/
+www/
+
+# Archivos de polymer
+bower_components/
+
+# Archivos de aurelia
+dist/
+
+# Archivos de backbone
+dist/
+
+# Archivos de jquery
+dist/
+
+# Archivos de lodash
+dist/
+
+# Archivos de underscore
+dist/
+
+# Archivos de moment
+dist/
+
+# Archivos de date-fns
+dist/
+
+# Archivos de dayjs
+dist/
+
+# Archivos de luxon
+dist/
+
+# Archivos de timezone
+dist/
+
+# Archivos de moment-timezone
+dist/
+
+# Archivos de date-fns-tz
+dist/
+
+# Archivos de dayjs-tz
+dist/
+
+# Archivos de luxon-tz
+dist/
+
+# Archivos de timezone-support
+dist/
+
+# Archivos de timezone-data
+dist/
+
+# Archivos de timezone-utils
+dist/
+
+# Archivos de timezone-convert
+dist/
+
+# Archivos de timezone-format
+dist/
+
+# Archivos de timezone-parse
+dist/
+
+# Archivos de timezone-validate
+dist/
+
+# Archivos de timezone-normalize
+dist/
+
+# Archivos de timezone-offset
+dist/
+
+# Archivos de timezone-zone
+dist/
+
+# Archivos de timezone-link
+dist/
+
+# Archivos de timezone-unpack
+dist/
+
+# Archivos de timezone-pack
+dist/
+
+# Archivos de timezone-compress
+dist/
+
+# Archivos de timezone-decompress
+dist/
+
+# Archivos de timezone-encode
+dist/
+
+# Archivos de timezone-decode
+dist/
+
+# Archivos de timezone-encrypt
+dist/
+
+# Archivos de timezone-decrypt
+dist/
+
+# Archivos de timezone-hash
+dist/
+
+# Archivos de timezone-sign
+dist/
+
+# Archivos de timezone-verify
+dist/
+
+# Archivos de timezone-cert
+dist/
+
+# Archivos de timezone-ca
+dist/
+
+# Archivos de timezone-crl
+dist/
+
+# Archivos de timezone-ocsp
+dist/
+
+# Archivos de timezone-tsp
+dist/
+
+# Archivos de timezone-cms
+dist/
+
+# Archivos de timezone-pkcs7
+dist/
+
+# Archivos de timezone-pkcs12
+dist/
+
+# Archivos de timezone-pkcs8
+dist/
+
+# Archivos de timezone-pkcs1
+dist/
+
+# Archivos de timezone-pkcs3
+dist/
+
+# Archivos de timezone-pkcs5
+dist/
+
+# Archivos de timezone-pkcs9
+dist/
+
+# Archivos de timezone-pkcs10
+dist/
+
+# Archivos de timezone-pkcs11
+dist/
+
+# Archivos de timezone-pkcs15
+dist/
+
+# Archivos de timezone-pkcs16
+dist/
+
+# Archivos de timezone-pkcs17
+dist/
+
+# Archivos de timezone-pkcs18
+dist/
+
+# Archivos de timezone-pkcs19
+dist/
+
+# Archivos de timezone-pkcs20
+dist/
+
+# Archivos de timezone-pkcs21
+dist/
+
+# Archivos de timezone-pkcs22
+dist/
+
+# Archivos de timezone-pkcs23
+dist/
+
+# Archivos de timezone-pkcs24
+dist/
+
+# Archivos de timezone-pkcs25
+dist/
+
+# Archivos de timezone-pkcs26
+dist/
+
+# Archivos de timezone-pkcs27
+dist/
+
+# Archivos de timezone-pkcs28
+dist/
+
+# Archivos de timezone-pkcs29
+dist/
+
+# Archivos de timezone-pkcs30
+dist/
+
+# Archivos de timezone-pkcs31
+dist/
+
+# Archivos de timezone-pkcs32
+dist/
+
+# Archivos de timezone-pkcs33
+dist/
+
+# Archivos de timezone-pkcs34
+dist/
+
+# Archivos de timezone-pkcs35
+dist/
+
+# Archivos de timezone-pkcs36
+dist/
+
+# Archivos de timezone-pkcs37
+dist/
+
+# Archivos de timezone-pkcs38
+dist/
+
+# Archivos de timezone-pkcs39
+dist/
+
+# Archivos de timezone-pkcs40
+dist/
+
+# Archivos de timezone-pkcs41
+dist/
+
+# Archivos de timezone-pkcs42
+dist/
+
+# Archivos de timezone-pkcs43
+dist/
+
+# Archivos de timezone-pkcs44
+dist/
+
+# Archivos de timezone-pkcs45
+dist/
+
+# Archivos de timezone-pkcs46
+dist/
+
+# Archivos de timezone-pkcs47
+dist/
+
+# Archivos de timezone-pkcs48
+dist/
+
+# Archivos de timezone-pkcs49
+dist/
+
+# Archivos de timezone-pkcs50
+dist/
+
+# Archivos de timezone-pkcs51
+dist/
+
+# Archivos de timezone-pkcs52
+dist/
+
+# Archivos de timezone-pkcs53
+dist/
+
+# Archivos de timezone-pkcs54
+dist/
+
+# Archivos de timezone-pkcs55
+dist/
+
+# Archivos de timezone-pkcs56
+dist/
+
+# Archivos de timezone-pkcs57
+dist/
+
+# Archivos de timezone-pkcs58
+dist/
+
+# Archivos de timezone-pkcs59
+dist/
+
+# Archivos de timezone-pkcs60
+dist/
+
+# Archivos de timezone-pkcs61
+dist/
+
+# Archivos de timezone-pkcs62
+dist/
+
+# Archivos de timezone-pkcs63
+dist/
+
+# Archivos de timezone-pkcs64
+dist/
+
+# Archivos de timezone-pkcs65
+dist/
+
+# Archivos de timezone-pkcs66
+dist/
+
+# Archivos de timezone-pkcs67
+dist/
+
+# Archivos de timezone-pkcs68
+dist/
+
+# Archivos de timezone-pkcs69
+dist/
+
+# Archivos de timezone-pkcs70
+dist/
+
+# Archivos de timezone-pkcs71
+dist/
+
+# Archivos de timezone-pkcs72
+dist/
+
+# Archivos de timezone-pkcs73
+dist/
+
+# Archivos de timezone-pkcs74
+dist/
+
+# Archivos de timezone-pkcs75
+dist/
+
+# Archivos de timezone-pkcs76
+dist/
+
+# Archivos de timezone-pkcs77
+dist/
+
+# Archivos de timezone-pkcs78
+dist/
+
+# Archivos de timezone-pkcs79
+dist/
+
+# Archivos de timezone-pkcs80
+dist/
+
+# Archivos de timezone-pkcs81
+dist/
+
+# Archivos de timezone-pkcs82
+dist/
+
+# Archivos de timezone-pkcs83
+dist/
+
+# Archivos de timezone-pkcs84
+dist/
+
+# Archivos de timezone-pkcs85
+dist/
+
+# Archivos de timezone-pkcs86
+dist/
+
+# Archivos de timezone-pkcs87
+dist/
+
+# Archivos de timezone-pkcs88
+dist/
+
+# Archivos de timezone-pkcs89
+dist/
+
+# Archivos de timezone-pkcs90
+dist/
+
+# Archivos de timezone-pkcs91
+dist/
+
+# Archivos de timezone-pkcs92
+dist/
+
+# Archivos de timezone-pkcs93
+dist/
+
+# Archivos de timezone-pkcs94
+dist/
+
+# Archivos de timezone-pkcs95
+dist/
+
+# Archivos de timezone-pkcs96
+dist/
+
+# Archivos de timezone-pkcs97
+dist/
+
+# Archivos de timezone-pkcs98
+dist/
+
+# Archivos de timezone-pkcs99
+dist/
+
+# Archivos de timezone-pkcs100
+dist/
+
+# Archivos de timezone-pkcs101
+dist/
+
+# Archivos de timezone-pkcs102
+dist/
+
+# Archivos de timezone-pkcs103
+dist/
+
+# Archivos de timezone-pkcs104
+dist/
+
+# Archivos de timezone-pkcs105
+dist/
+
+# Archivos de timezone-pkcs106
+dist/
+
+# Archivos de timezone-pkcs107
+dist/
+
+# Archivos de timezone-pkcs108
+dist/
+
+# Archivos de timezone-pkcs109
+dist/
+
+# Archivos de timezone-pkcs110
+dist/
+
+# Archivos de timezone-pkcs111
+dist/
+
+# Archivos de timezone-pkcs112
+dist/
+
+# Archivos de timezone-pkcs113
+dist/
+
+# Archivos de timezone-pkcs114
+dist/
+
+# Archivos de timezone-pkcs115
+dist/
+
+# Archivos de timezone-pkcs116
+dist/
+
+# Archivos de timezone-pkcs117
+dist/
+
+# Archivos de timezone-pkcs118
+dist/
+
+# Archivos de timezone-pkcs119
+dist/
+
+# Archivos de timezone-pkcs120
+dist/
+
+# Archivos de timezone-pkcs121
+dist/
+
+# Archivos de timezone-pkcs122
+dist/
+
+# Archivos de timezone-pkcs123
+dist/
+
+# Archivos de timezone-pkcs124
+dist/
+
+# Archivos de timezone-pkcs125
+dist/
+
+# Archivos de timezone-pkcs126
+dist/
+
+# Archivos de timezone-pkcs127
+dist/
+
+# Archivos de timezone-pkcs128
+dist/
+
+# Archivos de timezone-pkcs129
+dist/
+
+# Archivos de timezone-pkcs130
+dist/
+
+# Archivos de timezone-pkcs131
+dist/
+
+# Archivos de timezone-pkcs132
+dist/
+
+# Archivos de timezone-pkcs133
+dist/
+
+# Archivos de timezone-pkcs134
+dist/
+
+# Archivos de timezone-pkcs135
+dist/
+
+# Archivos de timezone-pkcs136
+dist/
+
+# Archivos de timezone-pkcs137
+dist/
+
+# Archivos de timezone-pkcs138
+dist/
+
+# Archivos de timezone-pkcs139
+dist/
+
+# Archivos de timezone-pkcs140
+dist/
+
+# Archivos de timezone-pkcs141
+dist/
+
+# Archivos de timezone-pkcs142
+dist/
+
+# Archivos de timezone-pkcs143
+dist/
+
+# Archivos de timezone-pkcs144
+dist/
+
+# Archivos de timezone-pkcs145
+dist/
+
+# Archivos de timezone-pkcs146
+dist/
+
+# Archivos de timezone-pkcs147
+dist/
+
+# Archivos de timezone-pkcs148
+dist/
+
+# Archivos de timezone-pkcs149
+dist/
+
+# Archivos de timezone-pkcs150
+dist/
+
+# Archivos de timezone-pkcs151
+dist/
+
+# Archivos de timezone-pkcs152
+dist/
+
+# Archivos de timezone-pkcs153
+dist/
+
+# Archivos de timezone-pkcs154
+dist/
+
+# Archivos de timezone-pkcs155
+dist/
+
+# Archivos de timezone-pkcs156
+dist/
+
+# Archivos de timezone-pkcs157
+dist/
+
+# Archivos de timezone-pkcs158
+dist/
+
+# Archivos de timezone-pkcs159
+dist/
+
+# Archivos de timezone-pkcs160
+dist/
+
+# Archivos de timezone-pkcs161
+dist/
+
+# Archivos de timezone-pkcs162
+dist/
+
+# Archivos de timezone-pkcs163
+dist/
+
+# Archivos de timezone-pkcs164
+dist/
+
+# Archivos de timezone-pkcs165
+dist/
+
+# Archivos de timezone-pkcs166
+dist/
+
+# Archivos de timezone-pkcs167
+dist/
+
+# Archivos de timezone-pkcs168
+dist/
+
+# Archivos de timezone-pkcs169
+dist/
+
+# Archivos de timezone-pkcs170
+dist/
+
+# Archivos de timezone-pkcs171
+dist/
+
+# Archivos de timezone-pkcs172
+dist/
+
+# Archivos de timezone-pkcs173
+dist/
+
+# Archivos de timezone-pkcs174
+dist/
+
+# Archivos de timezone-pkcs175
+dist/
+
+# Archivos de timezone-pkcs176
+dist/
+
+# Archivos de timezone-pkcs177
+dist/
+
+# Archivos de timezone-pkcs178
+dist/
+
+# Archivos de timezone-pkcs179
+dist/
+
+# Archivos de timezone-pkcs180
+dist/
+
+# Archivos de timezone-pkcs181
+dist/
+
+# Archivos de timezone-pkcs182
+dist/
+
+# Archivos de timezone-pkcs183
+dist/
+
+# Archivos de timezone-pkcs184
+dist/
+
+# Archivos de timezone-pkcs185
+dist/
+
+# Archivos de timezone-pkcs186
+dist/
+
+# Archivos de timezone-pkcs187
+dist/
+
+# Archivos de timezone-pkcs188
+dist/
+
+# Archivos de timezone-pkcs189
+dist/
+
+# Archivos de timezone-pkcs190
+dist/
+
+# Archivos de timezone-pkcs191
+dist/
+
+# Archivos de timezone-pkcs192
+dist/
+
+# Archivos de timezone-pkcs193
+dist/
+
+# Archivos de timezone-pkcs194
+dist/
+
+# Archivos de timezone-pkcs195
+dist/
+
+# Archivos de timezone-pkcs196
+dist/
+
+# Archivos de timezone-pkcs197
+dist/
+
+# Archivos de timezone-pkcs198
+dist/
+
+# Archivos de timezone-pkcs199
+dist/
+
+# Archivos de timezone-pkcs200
+dist/
+
+# Archivos de timezone-pkcs201
+dist/
+
+# Archivos de timezone-pkcs202
+dist/
+
+# Archivos de timezone-pkcs203
+dist/
+
+# Archivos de timezone-pkcs204
+dist/
+
+# Archivos de timezone-pkcs205
+dist/
+
+# Archivos de timezone-pkcs206
+dist/
+
+# Archivos de timezone-pkcs207
+dist/
+
+# Archivos de timezone-pkcs208
+dist/
+
+# Archivos de timezone-pkcs209
+dist/
+
+# Archivos de timezone-pkcs210
+dist/
+
+# Archivos de timezone-pkcs211
+dist/
+
+# Archivos de timezone-pkcs212
+dist/
+
+# Archivos de timezone-pkcs213
+dist/
+
+# Archivos de timezone-pkcs214
+dist/
+
+# Archivos de timezone-pkcs215
+dist/
+
+# Archivos de timezone-pkcs216
+dist/
+
+# Archivos de timezone-pkcs217
+dist/
+
+# Archivos de timezone-pkcs218
+dist/
+
+# Archivos de timezone-pkcs219
+dist/
+
+# Archivos de timezone-pkcs220
+dist/
+
+# Archivos de timezone-pkcs221
+dist/
+
+# Archivos de timezone-pkcs222
+dist/
+
+# Archivos de timezone-pkcs223
+dist/
+
+# Archivos de timezone-pkcs224
+dist/
+
+# Archivos de timezone-pkcs225
+dist/
+
+# Archivos de timezone-pkcs226
+dist/
+
+# Archivos de timezone-pkcs227
+dist/
+
+# Archivos de timezone-pkcs228
+dist/
+
+# Archivos de timezone-pkcs229
+dist/
+
+# Archivos de timezone-pkcs230
+dist/
+
+# Archivos de timezone-pkcs231
+dist/
+
+# Archivos de timezone-pkcs232
+dist/
+
+# Archivos de timezone-pkcs233
+dist/
+
+# Archivos de timezone-pkcs234
+dist/
+
+# Archivos de timezone-pkcs235
+dist/
+
+# Archivos de timezone-pkcs236
+dist/
+
+# Archivos de timezone-pkcs237
+dist/
+
+# Archivos de timezone-pkcs238
+dist/
+
+# Archivos de timezone-pkcs239
+dist/
+
+# Archivos de timezone-pkcs240
+dist/
+
+# Archivos de timezone-pkcs241
+dist/
+
+# Archivos de timezone-pkcs242
+dist/
+
+# Archivos de timezone-pkcs243
+dist/
+
+# Archivos de timezone-pkcs244
+dist/
+
+# Archivos de timezone-pkcs245
+dist/
+
+# Archivos de timezone-pkcs246
+dist/
+
+# Archivos de timezone-pkcs247
+dist/
+
+# Archivos de timezone-pkcs248
+dist/
+
+# Archivos de timezone-pkcs249
+dist/
+
+# Archivos de timezone-pkcs250
+dist/
+
+# Archivos de timezone-pkcs251
+dist/
+
+# Archivos de timezone-pkcs252
+dist/
+
+# Archivos de timezone-pkcs253
+dist/
+
+# Archivos de timezone-pkcs254
+dist/
+
+# Archivos de timezone-pkcs255
+dist/
+
+# Archivos de timezone-pkcs256
+dist/
+
+# Archivos de timezone-pkcs257
+dist/
+
+# Archivos de timezone-pkcs258
+dist/
+
+# Archivos de timezone-pkcs259
+dist/
+
+# Archivos de timezone-pkcs260
+dist/
+
+# Archivos de timezone-pkcs261
+dist/
+
+# Archivos de timezone-pkcs262
+dist/
+
+# Archivos de timezone-pkcs263
+dist/
+
+# Archivos de timezone-pkcs264
+dist/
+
+# Archivos de timezone-pkcs265
+dist/
+
+# Archivos de timezone-pkcs266
+dist/
+
+# Archivos de timezone-pkcs267
+dist/
+
+# Archivos de timezone-pkcs268
+dist/
+
+# Archivos de timezone-pkcs269
+dist/
+
+# Archivos de timezone-pkcs270
+dist/
+
+# Archivos de timezone-pkcs271
+dist/
+
+# Archivos de timezone-pkcs272
+dist/
+
+# Archivos de timezone-pkcs273
+dist/
+
+# Archivos de timezone-pkcs274
+dist/
+
+# Archivos de timezone-pkcs275
+dist/
+
+# Ar 

@@ -1,3 +1,5 @@
+import { ErrorHandlerUtils } from './error-handler.js';
+
 /**
  * Car Animation 3D - Visualizador 3D de carro usando iframe
  */
@@ -14,11 +16,9 @@ class CarAnimation {
    */
   async init() {
     try {
-      console.log('🚗 Inicializando visualizador 3D del carro...');
-      
       this.container = document.getElementById('car-animation-canvas');
       if (!this.container) {
-        console.log('Contenedor de animación no encontrado');
+        ErrorHandlerUtils.system('Contenedor de animación no encontrado');
         return;
       }
 
@@ -27,13 +27,12 @@ class CarAnimation {
       if (this.iframe) {
         this.setupEvents();
         this.isInitialized = true;
-        console.log('✅ Visualizador 3D inicializado correctamente');
       } else {
-        console.error('❌ No se encontró el iframe del visualizador');
+        ErrorHandlerUtils.system('No se encontró el iframe del visualizador');
       }
       
     } catch (error) {
-      console.error('❌ Error inicializando visualizador 3D:', error);
+      ErrorHandlerUtils.system('Error inicializando visualizador 3D', error);
     }
   }
 
@@ -46,7 +45,6 @@ class CarAnimation {
       (entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            console.log('Visualizador 3D visible, cargando contenido...');
             // El iframe se cargará automáticamente cuando sea visible
           }
         });
@@ -61,11 +59,11 @@ class CarAnimation {
     // Evento de carga del iframe
     if (this.iframe) {
       this.iframe.addEventListener('load', () => {
-        console.log('✅ Visualizador 3D cargado correctamente');
+        // Visualizador 3D cargado correctamente
       });
 
       this.iframe.addEventListener('error', () => {
-        console.error('❌ Error cargando visualizador 3D');
+        ErrorHandlerUtils.system('Error cargando visualizador 3D');
       });
     }
   }
@@ -86,32 +84,32 @@ class CarAnimation {
 
 // Función de inicialización para el sistema modular
 export async function initCarAnimation() {
-  console.log('Inicializando visualizador 3D del carro...');
-  
-  // Esperar a que el componente esté cargado
-  let attempts = 0;
-  const maxAttempts = 10;
-  
-  while (attempts < maxAttempts) {
-    const container = document.getElementById('car-animation-canvas');
-    if (container) {
-      console.log('Contenedor de animación encontrado, inicializando...');
-      break;
+  try {
+    // Esperar a que el componente esté cargado
+    let attempts = 0;
+    const maxAttempts = 10;
+    
+    while (attempts < maxAttempts) {
+      const container = document.getElementById('car-animation-canvas');
+      if (container) {
+        break;
+      }
+      
+      await new Promise(resolve => setTimeout(resolve, 500));
+      attempts++;
     }
     
-    console.log(`Intento ${attempts + 1}: Esperando a que el componente de animación se cargue...`);
-    await new Promise(resolve => setTimeout(resolve, 500));
-    attempts++;
+    if (attempts >= maxAttempts) {
+      ErrorHandlerUtils.system('No se pudo encontrar el contenedor de animación después de varios intentos');
+      return;
+    }
+    
+    const carAnimation = new CarAnimation();
+    await carAnimation.init();
+    
+    // Guardar referencia global
+    window.carAnimation = carAnimation;
+  } catch (error) {
+    ErrorHandlerUtils.system('Error al inicializar animación del carro', error);
   }
-  
-  if (attempts >= maxAttempts) {
-    console.error('No se pudo encontrar el contenedor de animación después de varios intentos');
-    return;
-  }
-  
-  const carAnimation = new CarAnimation();
-  await carAnimation.init();
-  
-  // Guardar referencia global
-  window.carAnimation = carAnimation;
 } 

@@ -1,5 +1,5 @@
-// import servicios from '../data/servicios.json' assert { type: 'json' };
-// import config from '../data/config.json' assert { type: 'json' };
+import { ErrorHandlerUtils } from './error-handler.js';
+
 export async function renderTestimonios() {
   // Buscar el contenedor correcto - puede estar en diferentes lugares
   let container = document.getElementById('testimonials-container');
@@ -23,12 +23,11 @@ export async function renderTestimonios() {
   }
   
   if (!container) {
-    console.log('Contenedor de testimonios no encontrado');
+    ErrorHandlerUtils.system('Contenedor de testimonios no encontrado');
     return;
   }
   
   try {
-    console.log('Cargando testimonios...');
     const [testRes, confRes] = await Promise.all([
       fetch('data/testimonios.json'),
       fetch('data/config.json')
@@ -60,13 +59,10 @@ export async function renderTestimonios() {
       `;
     });
     
-    console.log('HTML generado para testimonios:', html);
-    
     container.innerHTML = html;
-    console.log('Testimonios renderizados correctamente');
     
   } catch (error) {
-    console.error('Error cargando testimonios:', error);
+    ErrorHandlerUtils.system('Error al cargar testimonios', error);
     if (container) {
       container.innerHTML = `
         <div style="text-align: center; padding: 2rem; color: var(--text-secondary);">
@@ -80,18 +76,14 @@ export async function renderTestimonios() {
 
 // Función de inicialización para el sistema modular
 export async function initTestimonials() {
-  console.log('Inicializando testimonios...');
-  
   try {
     // Esperar un poco para que los componentes se carguen
     await new Promise(resolve => setTimeout(resolve, 100));
     
     // Renderizar testimonios
     await renderTestimonios();
-    
-    console.log('Testimonios inicializados correctamente');
   } catch (error) {
-    console.error('Error inicializando testimonios:', error);
+    ErrorHandlerUtils.system('Error al inicializar testimonios', error);
   }
 }
 
