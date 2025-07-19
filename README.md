@@ -19,7 +19,7 @@ Sitio web moderno y responsive para AUTO SPA PRO, un negocio de lavado de autos 
 - **Contacto** con formulario funcional
 
 ### 🔧 **Funcionalidades Avanzadas**
-- **Formulario de contacto** con EmailJS
+- **Formulario de contacto** con WhatsApp automático
 - **WhatsApp automático** para reservas
 - **Galería de imágenes y videos** con navegación
 - **Mapa interactivo** embebido
@@ -33,7 +33,6 @@ Sitio web moderno y responsive para AUTO SPA PRO, un negocio de lavado de autos 
 - **JavaScript ES6+** - Funcionalidad interactiva
 - **Font Awesome** - Iconografía
 - **Google Fonts** - Tipografías
-- **EmailJS** - Envío de emails
 - **Google Maps** - Integración de mapas
 
 ## �� Estructura del Proyecto
@@ -88,25 +87,19 @@ http://localhost:8000
 
 ## ⚙️ Configuración
 
-### 📧 **EmailJS (Formulario de Contacto)**
+### 📱 **WhatsApp (Formulario de Contacto)**
 
-1. **Crear cuenta** en [EmailJS.com](https://www.emailjs.com/)
-2. **Configurar servicio** de email (Gmail recomendado)
-3. **Crear plantilla** de email (ver `EMAILJS_SETUP.md`)
-4. **Actualizar configuración** en `data/config.json`:
+El formulario de contacto utiliza WhatsApp para enviar las reservas automáticamente:
 
-```json
-{
-  "emailjs": {
-    "serviceId": "tu_service_id",
-    "templateId": "tu_template_id",
-    "userId": "tu_user_id"
-  }
-}
-```
+1. **Configuración automática** - No requiere configuración adicional
+2. **Envío directo** al administrador (321 3284627)
+3. **Confirmación automática** al cliente
+4. **Mensajes personalizados** con detalles de la reserva
+
+El sistema está configurado para funcionar inmediatamente sin necesidad de servicios externos.
 
 ###  **WhatsApp**
-- **Número configurado:** 3107505784
+- **Número configurado:** 3213284627
 - **Mensaje predefinido** incluido
 - **Botón flotante** funcional
 
@@ -176,17 +169,16 @@ El sitio está optimizado para:
 ### **Pasos para Despliegue**
 1. **Subir archivos** al servidor
 2. **Configurar dominio** (opcional)
-3. **Verificar EmailJS** en producción
-4. **Probar funcionalidades** principales
+3. **Probar funcionalidades** principales
 
 ##  Solución de Problemas
 
 ### **Problemas Comunes**
 
-**Formulario no envía emails:**
-- Verificar configuración de EmailJS
+**Formulario no envía WhatsApp:**
+- Verificar conexión a internet
 - Revisar consola del navegador
-- Confirmar que el servicio esté activo
+- Confirmar que WhatsApp esté disponible
 
 **Galería no carga:**
 - Verificar rutas de archivos
@@ -201,8 +193,7 @@ El sitio está optimizado para:
 ## 📞 Soporte
 
 Para soporte técnico o consultas:
-- **Email:** sastoque42@gmail.com
-- **WhatsApp:** 3107505784
+- **WhatsApp:** 3213284627
 
 ## 📄 Licencia
 
@@ -212,7 +203,6 @@ Este proyecto es propiedad de AUTO SPA PRO. Todos los derechos reservados.
 
 - **Font Awesome** por los iconos
 - **Google Fonts** por las tipografías
-- **EmailJS** por el servicio de emails
 - **Google Maps** por la integración de mapas
 
 ---
@@ -275,8 +265,7 @@ out/
 # Descomenta si necesitas ignorar configuraciones locales
 # data/config.local.json
 
-# Archivos de EmailJS (si se generan automáticamente)
-# .emailjs/
+
 
 # Archivos de Google Analytics (si se usan)
 # google-analytics.js

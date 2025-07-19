@@ -1,3 +1,5 @@
+import { ErrorHandlerUtils } from './error-handler.js';
+
 export async function renderUbicacion() {
   const section = document.querySelector('.location-section');
   if (!section) return;
@@ -25,7 +27,7 @@ export async function renderUbicacion() {
       `;
     }
   } catch (e) {
-    console.error('Error cargando configuración:', e);
+    ErrorHandlerUtils.system('Error cargando configuración', e);
     // Fallback si no se puede cargar la configuración
     const mapContainer = section.querySelector('.map-container');
     if (mapContainer) {
@@ -49,13 +51,15 @@ export async function renderUbicacion() {
 
 // Función de inicialización para el sistema modular
 export async function initLocation() {
-  console.log('Inicializando ubicación...');
-  
-  // Renderizar el mapa primero
-  await renderUbicacion();
-  
-  // Configurar funcionalidades de ubicación
-  setupLocationFeatures();
+  try {
+    // Renderizar el mapa primero
+    await renderUbicacion();
+    
+    // Configurar funcionalidades de ubicación
+    setupLocationFeatures();
+  } catch (error) {
+    ErrorHandlerUtils.system('Error al inicializar ubicación', error);
+  }
 }
 
 // Configurar funcionalidades de ubicación
@@ -80,7 +84,6 @@ function setupPhoneLinks() {
   phoneLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       // Tracking de clicks en teléfono
-      console.log('Phone link clicked:', link.href);
     });
   });
 }
@@ -92,7 +95,6 @@ function setupAddressLinks() {
   addressLinks.forEach(link => {
     link.addEventListener('click', (e) => {
       // Tracking de clicks en dirección
-      console.log('Address link clicked');
     });
   });
 }

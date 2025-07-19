@@ -1,5 +1,4 @@
-// import servicios from '../data/servicios.json' assert { type: 'json' };
-// import config from '../data/config.json' assert { type: 'json' };
+import { ErrorHandlerUtils } from './error-handler.js';
 
 export async function renderWhatsappFloat() {
   const cont = document.getElementById('whatsapp-float');
@@ -19,10 +18,10 @@ export async function renderWhatsappFloat() {
     `;
     
   } catch (e) {
-    console.error('Error cargando WhatsApp:', e);
+    ErrorHandlerUtils.system('Error cargando WhatsApp', e);
     // Fallback con número hardcodeado
     cont.innerHTML = `
-      <a href="https://wa.me/573107505784?text=Hola,%20me%20interesa%20un%20servicio%20de%20lavado%20de%20auto%20en%20AUTO%20SPA%20PRO" 
+      <a href="https://wa.me/3213284627?text=Hola,%20me%20interesa%20un%20servicio%20de%20lavado%20de%20auto%20en%20AUTO%20SPA%20PRO" 
          target="_blank" 
          rel="noopener noreferrer"
          class="whatsapp-btn">
@@ -34,13 +33,15 @@ export async function renderWhatsappFloat() {
 
 // Función de inicialización para el sistema modular
 export function initWhatsApp() {
-  console.log('Inicializando WhatsApp...');
-  
-  // Renderizar botón flotante
-  renderWhatsappFloat();
-  
-  // Configurar funcionalidades adicionales
-  setupWhatsAppFeatures();
+  try {
+    // Renderizar botón flotante
+    renderWhatsappFloat();
+    
+    // Configurar funcionalidades adicionales
+    setupWhatsAppFeatures();
+  } catch (error) {
+    ErrorHandlerUtils.system('Error al inicializar WhatsApp', error);
+  }
 }
 
 // Configurar funcionalidades de WhatsApp
@@ -82,7 +83,6 @@ function setupWhatsAppFeatures() {
     if (whatsappLink) {
       whatsappLink.addEventListener('click', () => {
         // Aquí podrías agregar analytics
-        console.log('WhatsApp clicked');
       });
     }
   }
@@ -106,7 +106,7 @@ function createWhatsAppLinks() {
                        'Hola, me interesa un servicio de lavado en AUTO SPA PRO';
         
         // Crear URL de WhatsApp
-        const whatsappUrl = `https://wa.me/573107505784?text=${encodeURIComponent(message)}`;
+        const whatsappUrl = `https://wa.me/3213284627?text=${encodeURIComponent(message)}`;
         
         // Abrir WhatsApp
         window.open(whatsappUrl, '_blank');
@@ -119,7 +119,7 @@ function createWhatsAppLinks() {
 
 // Función para crear un enlace de WhatsApp dinámicamente
 export function createWhatsAppLink(message = 'Hola, me interesa un servicio de lavado') {
-  return `https://wa.me/573107505784?text=${encodeURIComponent(message)}`;
+  return `https://wa.me/3213284627?text=${encodeURIComponent(message)}`;
 }
 
 // Función para abrir WhatsApp con mensaje personalizado

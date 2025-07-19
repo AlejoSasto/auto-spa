@@ -1,17 +1,20 @@
 // Utilidades generales para el sistema modular
+import { ErrorHandlerUtils } from './error-handler.js';
 
 // Función de inicialización para el sistema modular
 export function initUtils() {
-  console.log('Inicializando utilidades...');
-  
-  // Configurar utilidades básicas
-  setupBasicUtils();
-  
-  // Configurar utilidades de accesibilidad
-  setupAccessibilityUtils();
-  
-  // Configurar utilidades de rendimiento
-  setupPerformanceUtils();
+  try {
+    // Configurar utilidades básicas
+    setupBasicUtils();
+    
+    // Configurar utilidades de accesibilidad
+    setupAccessibilityUtils();
+    
+    // Configurar utilidades de rendimiento
+    setupPerformanceUtils();
+  } catch (error) {
+    ErrorHandlerUtils.system('Error al inicializar utilidades', error);
+  }
 }
 
 // Configurar utilidades básicas
@@ -125,11 +128,13 @@ function setupPerformanceUtils() {
 // Manejar fin de scroll
 function handleScrollEnd() {
   // Aquí puedes agregar lógica que se ejecute cuando el scroll termine
-  console.log('Scroll ended');
+  // Por ejemplo: lazy loading, animaciones, etc.
 }
 
 // Función para mostrar toast/notificaciones
 export function showToast(message, type = 'info', duration = 3000) {
+  // Hacer disponible globalmente para el sistema de errores
+  window.showToast = showToast;
   const toast = document.createElement('div');
   toast.className = `toast toast-${type}`;
   toast.innerHTML = `

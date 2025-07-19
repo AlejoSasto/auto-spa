@@ -1,22 +1,37 @@
 [
   {
-    "nombre": "Lavado Básico",
-    "descripcion": "Aspirado interior, limpieza exterior y secado manual.",
-    "precio": "$18.000"
+    "nombre": "Juagada Moto",
+    "descripcion": "Incluye lavado básico + polichada y acabado profesional.",
+    "precio": "15.000"
   },
   {
-    "nombre": "Lavado Premium",
-    "descripcion": "Incluye lavado básico + limpieza profunda de tapetes, paneles y tablero.",
-    "precio": "$28.000"
+    "nombre": "Juagada Carro",
+    "descripcion": "Incluye lavado básico + polichada + limpieza profunda de tapetes, paneles y tablero.",
+    "precio": "20.000"
   },
   {
-    "nombre": "Encerado Profesional",
-    "descripcion": "Protección de pintura, brillo y acabado suave.",
-    "precio": "$45.000"
+    "nombre": "Lavada General",
+    "descripcion": "Lavado completo exterior e interior con productos premium.",
+    "precio": "50.000"
   },
   {
-    "nombre": "Limpieza de Motor",
-    "descripcion": "Desengrasado, detallado seguro y protección de componentes.",
-    "precio": "$32.000"
+    "nombre": "Volquetas",
+    "descripcion": "Lavado especializado para volquetas con productos industriales.",
+    "precio": "100.000"
+  },
+  {
+    "nombre": "Doble Troque",
+    "descripcion": "Lavado profesional para camiones doble troque con limpieza de cabina.",
+    "precio": "100.000"
+  },
+  {
+    "nombre": "Buses y busetas",
+    "descripcion": "Lavado completo para busetas con limpieza de asientos y pisos.",
+    "precio": "100.000"
+  },
+  {
+    "nombre": "Tractocamiones",
+    "descripcion": "Lavado especializado para tractocamiones con productos de alta resistencia.",
+    "precio": "100.000"
   }
 ]
